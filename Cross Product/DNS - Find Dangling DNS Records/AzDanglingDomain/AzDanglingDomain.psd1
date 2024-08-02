@@ -12,7 +12,7 @@
     RootModule = 'AzDanglingDomain'
     
     # Version number of this module.
-    ModuleVersion = '0.0.9'
+    ModuleVersion = '1.0.6'
     
     # Supported PSEditions
     # CompatiblePSEditions = @('Desktop', 'Core')

@@ -135,7 +135,7 @@ Function Get-AZResourcesHash {
     (
         $query,
         $keyName,
-        $azResourcesOutputFile
+        $outputFile
     )
 
     $AzResources = [System.Collections.Hashtable]::new()
@@ -181,8 +181,8 @@ Function Get-AZResourcesHash {
 
     # Write the final hashmap to a file
     $json = $AzResources | ConvertTo-Json -depth 100
-    $json | Out-File -FilePath $azResourcesOutputFile
-    Write-Host "Azure Resources Hashmap written to file: $azResourcesOutputFile"
+    $json | Out-File -FilePath $outputFile
+    Write-Host "Azure Resources Hashmap written to file: $outputFile"
     # TODO LOG: List of all subscriptions covered -> fetch from Az-Graph or hashmap, or probably both
     return $AzResources
 }
